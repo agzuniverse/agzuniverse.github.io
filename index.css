@@ -8,7 +8,6 @@ body {
   min-height: 100%;
   width: 100%;
   margin: 0px;
-  background-color: rgba(0, 0, 0, 0.87);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,13 +20,38 @@ a {
 }
 
 .bg-layer-1 {
+  background-color: rgba(0, 0, 0, 0.87);
   position: fixed;
   height: 100vh;
   width: 100vw;
   top: 0px;
   left: 0px;
   z-index: -1;
-  background-repeat: repeat;
+  animation-name: bg-transition;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bg-transition {
+  0% {
+    background-color: rgba(0, 0, 0, 0.87);
+  }
+  50% {
+    background-color: rgb(45, 16, 73);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.87);
+  }
+}
+
+.bg-layer-2 {
+  background-color: blueviolet;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0px;
+  left: 0px;
+  z-index: -2;
 }
 
 .main {
