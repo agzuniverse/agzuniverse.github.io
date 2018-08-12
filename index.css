@@ -85,5 +85,25 @@ a {
 }
 
 .links {
-  font-size: 20px;
+  font-size: 0.5rem;
+}
+
+@media only screen and (max-device-width: 768px) {
+  html {
+    font-size: 80px;
+  }
+  .profile-pic {
+    height: 50vw;
+    width: 50vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 80px;
+  }
+  .profile-pic {
+    height: 50vw;
+    width: 50vw;
+  }
 }
