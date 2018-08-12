@@ -1,7 +1,7 @@
 $(document).ready(() => {
-  // particlesJS.load("particles", "particles-config.json", () => {
-  //   // console.log("particles.js loaded");
-  // });
+  particlesJS.load("particles", "particles-config.json", () => {
+    // console.log("particles.js loaded");
+  });
 
   var options = {
     strings: [
