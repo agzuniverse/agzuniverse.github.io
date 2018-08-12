@@ -8,10 +8,19 @@ body {
   min-height: 100%;
   width: 100%;
   margin: 0px;
-  background-color: rgb(20, 20, 20);
+  background-color: rgba(0, 0, 0, 0.87);
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.bg-layer-1 {
+  position: absolute;
+  min-height: 100vh;
+  min-width: 100vw;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
 }
 
 .main {
