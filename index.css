@@ -191,8 +191,11 @@ a:hover {
     height: 50vw;
     width: 50vw;
   }
-
   .skillsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .projectsCard {
     flex-direction: column;
   }
 }
