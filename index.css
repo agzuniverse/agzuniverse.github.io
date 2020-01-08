@@ -185,4 +185,7 @@ a {
     flex-direction: column;
     align-items: center;
   }
+  .projectsCard {
+    flex-direction: column;
+  }
 }
