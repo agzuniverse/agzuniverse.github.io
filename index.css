@@ -72,6 +72,36 @@ a {
   width: 60%;
 }
 
+.projectsTitle {
+  font-size: 0.7rem;
+  color: yellow;
+}
+
+.hoverline:hover {
+  text-decoration: underline;
+}
+
+.projectsImage {
+  padding: 10px;
+  height: 100px;
+  border-radius: 20%;
+}
+
+.projectsCard {
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  padding: 20px;
+  align-items: center;
+}
+
+.projectsContent {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 0.5rem;
+}
+
 @keyframes bg-transition {
   0% {
     background-color: rgba(0, 0, 0, 0.87);
