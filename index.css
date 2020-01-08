@@ -8,10 +8,8 @@ body {
   min-height: 100%;
   width: 100%;
   margin: 0px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: monospace;
+  overflow-x: hidden;
 }
 
 a {
@@ -55,6 +53,7 @@ a {
 }
 
 .main {
+  padding-top: 3rem;
   color: rgba(255, 255, 255, 0.8);
   text-align: center;
 }
