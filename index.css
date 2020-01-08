@@ -16,6 +16,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
+a:hover {
+  text-decoration: underline;
+}
 
 .bg-layer-1 {
   background-color: rgba(0, 0, 0, 0.87);
@@ -78,10 +81,6 @@ a {
 .projectsTitle {
   font-size: 0.7rem;
   color: yellow;
-}
-
-.hoverline:hover {
-  text-decoration: underline;
 }
 
 .projectsWrapper {
@@ -167,6 +166,11 @@ a {
 
 .links {
   font-size: 0.5rem;
+}
+
+.sectionFooter {
+  font-size: 0.6rem;
+  color: cyan;
 }
 
 @media only screen and (max-device-width: 768px) {
