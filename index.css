@@ -51,6 +51,27 @@ a {
   align-items: center;
 }
 
+.postsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.postsTitle {
+  font-size: 0.7rem;
+  color: red;
+}
+
+.postsCard {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 0.5rem;
+  width: 60%;
+}
+
 @keyframes bg-transition {
   0% {
     background-color: rgba(0, 0, 0, 0.87);
