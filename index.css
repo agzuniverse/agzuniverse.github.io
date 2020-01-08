@@ -185,7 +185,7 @@ a:hover {
 
 @media only screen and (max-device-width: 768px) {
   html {
-    font-size: 30px;
+    font-size: 80px;
   }
   .profile-pic {
     height: 50vw;
@@ -197,12 +197,24 @@ a:hover {
   }
   .projectsCard {
     flex-direction: column;
+  }
+  .skillsCard {
+    font-size: 0.7rem;
+    padding: 0px 10px 0px 10px;
+    height: 250px;
+    width: 250px;
+  }
+  .skillsImage {
+    max-height: 100px;
+  }
+  .projectsImage {
+    height: 250px;
   }
 }
 
 @media only screen and (max-width: 768px) {
   html {
-    font-size: 30px;
+    font-size: 80px;
   }
   .profile-pic {
     height: 50vw;
@@ -214,5 +226,14 @@ a:hover {
   }
   .projectsCard {
     flex-direction: column;
+  }
+  .skillsCard {
+    font-size: 0.7rem;
+    padding: 0px 10px 0px 10px;
+    height: 250px;
+    width: 250px;
+  }
+  .skillsImage {
+    max-height: 100px;
   }
 }
