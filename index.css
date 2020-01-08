@@ -173,6 +173,16 @@ a:hover {
   color: cyan;
 }
 
+.footer {
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100px;
+  font-size: 0.5rem;
+  color: cyan;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @media only screen and (max-device-width: 768px) {
   html {
     font-size: 30px;
