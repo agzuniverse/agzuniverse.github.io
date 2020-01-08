@@ -183,5 +183,6 @@ a {
   }
   .skillsContainer {
     flex-direction: column;
+    align-items: center;
   }
 }
