@@ -30,6 +30,27 @@ a {
   animation-iteration-count: infinite;
 }
 
+.skillsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 0.5rem;
+  padding: 10px;
+}
+
+.skillsImage {
+  max-height: 50px;
+}
+
+.skillsCard {
+  display: flex;
+  height: 100px;
+  width: 100px;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
 @keyframes bg-transition {
   0% {
     background-color: rgba(0, 0, 0, 0.87);
@@ -89,20 +110,27 @@ a {
 
 @media only screen and (max-device-width: 768px) {
   html {
-    font-size: 80px;
+    font-size: 30px;
   }
   .profile-pic {
     height: 50vw;
     width: 50vw;
+  }
+
+  .skillsContainer {
+    flex-direction: column;
   }
 }
 
 @media only screen and (max-width: 768px) {
   html {
-    font-size: 80px;
+    font-size: 30px;
   }
   .profile-pic {
     height: 50vw;
     width: 50vw;
+  }
+  .skillsContainer {
+    flex-direction: column;
   }
 }
