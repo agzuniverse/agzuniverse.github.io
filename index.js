@@ -3,10 +3,11 @@ $(document).ready(() => {
     // console.log("particles.js loaded");
   });
 
-  var options = {
+  let options = {
     strings: [
       "I like to code",
-      "I like to write",
+      "I like to code",
+      "I like to create",
       "I like to play",
       "I like to listen"
     ],
@@ -18,5 +19,5 @@ $(document).ready(() => {
     loopCount: Infinity
   };
 
-  var typed = new Typed(".subtitle", options);
+  let typed = new Typed(".subtitle", options);
 });
