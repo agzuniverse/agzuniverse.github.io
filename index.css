@@ -2,191 +2,226 @@ html {
   height: 100vh;
   width: 100vw;
   font-size: 40px;
+  background: #bfbfbf; /* BIOS grey */
 }
 
 body {
   min-height: 100%;
   width: 100%;
-  margin: 0px;
-  font-family: monospace;
+  margin: 0px auto;
+  font-family: 'IBM VGA 8x16', 'Fira Mono', 'Consolas', monospace;
+  background: transparent;
+  color: #0033cc; /* BIOS blue */
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: #0033cc;
+  background: transparent;
+  border-bottom: 1px dotted #0033cc;
 }
 a:hover {
   text-decoration: underline;
+  color: #0000ff;
+  border-bottom: 1px solid #0000ff;
+  background: red;
 }
 
 .bg-layer-1 {
-  background-color: rgba(0, 0, 0, 0.87);
   position: fixed;
-  height: 100vh;
+  top: 0;
+  left: 0;
   width: 100vw;
-  top: 0px;
-  left: 0px;
-  z-index: -1;
-  animation-name: bg-transition;
-  animation-duration: 20s;
-  animation-iteration-count: infinite;
+  height: 100vh;
+  z-index: -100;
+  display: block;
+  background-color: #bfbfbf; /* BIOS grey */
 }
 
-.postsWrapper {
+.main, .projectsWrapper, .postsWrapper {
+  max-width: 1200px;
+  min-width: 320px;
+  margin: 0;
+  border: 2px solid #0033cc;
+  background: transparent;
+  color: #0033cc;
+  padding: 2rem 10vw 1rem 10vw;
+  box-shadow: 0 0 20px #0033cc33;
+}
+
+@media only screen and (max-width: 1400px) {
+  .main, .projectsWrapper, .postsWrapper {
+    max-width: 98vw;
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 60px;
+  }
+  .main, .projectsWrapper, .postsWrapper {
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    max-width: 98vw;
+  }
+  .profile-pic {
+    height: 30vw;
+    width: 30vw;
+  }
+  .projectsCard, .postsCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .projectsImage {
+    height: 80px;
+    width: 80px;
+    margin-bottom: 0.5rem;
+    margin-right: 0;
+  }
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0033cc;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.profile-pic {
+  display: block;
+  margin: 0.5rem auto 1rem auto;
+  border: 2px solid #0033cc;
+  background: #bfbfbf;
+  height: 120px;
+  width: 120px;
+  object-fit: cover;
+}
+
+.subtitle_wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  justify-content: center;
+  margin: 0.5rem 0 1rem 0;
 }
 
-.postsTitle {
+.subtitle {
   font-size: 0.7rem;
-  color: red;
+  color: #0033cc;
 }
 
-.postsCard {
-  padding: 20px;
+.links {
+  text-align: center;
+  font-size: 0.7rem;
+  margin: 0 0 2rem 2rem;
+  color: #0033cc;
+}
+
+.projectsWrapper, .postsWrapper {
+  max-width: 700px;
+  margin: 0;
+  border: 2px solid #0033cc;
+  background: #bfbfbf;
+  color: #0033cc;
+  padding: 1.5rem 2rem 1rem 2rem;
+  box-shadow: 0 0 20px #0033cc33;
+}
+
+.tabs {
   display: flex;
-  flex-direction: column;
-  text-align: left;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0 0 0;
+}
+
+.tab-btn {
+  background: #bfbfbf;
+  color: #0033cc;
+  border: 2px solid #0033cc;
+  font-family: inherit;
+  font-size: 0.7rem;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  outline: none;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  transition: none;
+  margin-bottom: -1px; /* Overlap the border of the section below */
+}
+
+.tab-btn.active {
+  background: #0033cc;
+  color: #fff;
+  border-bottom: 2px solid #bfbfbf;
+}
+
+.tab-btn:not(.active):hover {
+  background: red;
+  color: #0000ff;
+}
+
+.projectsWrapper h3, .postsWrapper h3 {
+  color: #0000ff;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.projectsCard, .postsCard {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  border-bottom: 1px dotted #0033cc;
+  padding: 1rem 0;
   font-size: 0.5rem;
-  width: 60%;
 }
 
-.projectsTitle {
-  font-size: 0.7rem;
-  color: yellow;
-}
-
-.projectsWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.2);
+.projectsCard:last-child, .postsCard:last-child {
+  border-bottom: none;
 }
 
 .projectsImage {
-  padding: 10px;
-  height: 100px;
-  border-radius: 20%;
-}
-
-.projectsCard {
-  display: flex;
-  flex-direction: row;
-  width: 60%;
-  padding: 20px;
-  align-items: center;
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
+  border: 1px solid #0033cc;
+  margin-right: 1.5rem;
+  background: #bfbfbf;
 }
 
 .projectsContent {
   display: flex;
   flex-direction: column;
   text-align: left;
-  font-size: 0.5rem;
 }
 
-@keyframes bg-transition {
-  0% {
-    background-color: rgba(0, 0, 0, 0.87);
-  }
-  50% {
-    background-color: rgb(45, 16, 73);
-  }
-  100% {
-    background-color: rgba(0, 0, 0, 0.87);
-  }
-}
-
-.bg-layer-2 {
-  background-color: blueviolet;
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  top: 0px;
-  left: 0px;
-  z-index: -2;
-}
-
-.main {
-  padding-top: 3rem;
-  color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-}
-
-.title {
-  font-size: 1rem;
-  height: 10vh;
-}
-
-.subtitle {
-  font-size: 0.55rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.subtitle_wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-
-.profile-pic {
-  border-radius: 50%;
-  height: 20vw;
-  width: 20vw;
-}
-
-.links {
-  font-size: 0.5rem;
+.projectsTitle, .postsTitle {
+  font-size: 0.7rem;
+  color: #0000ff;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
 }
 
 .sectionFooter {
   font-size: 0.6rem;
-  color: cyan;
+  color: #0033cc;
+  margin-top: 1rem;
 }
 
 .footer {
-  background-color: rgba(0, 0, 0, 0.4);
-  height: 100px;
+  background: #bfbfbf;
+  border-top: 2px solid #0033cc;
+  height: 60px;
   font-size: 0.5rem;
-  color: cyan;
+  color: #0033cc;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-@media only screen and (max-device-width: 768px) {
-  html {
-    font-size: 80px;
-  }
-  .profile-pic {
-    height: 50vw;
-    width: 50vw;
-  }
-  .projectsCard {
-    flex-direction: column;
-  }
-  .projectsImage {
-    height: 250px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  html {
-    font-size: 80px;
-  }
-  .profile-pic {
-    height: 50vw;
-    width: 50vw;
-  }
-  .projectsCard {
-    flex-direction: column;
-  }
-  .projectsImage {
-    height: 250px;
-  }
+  margin-top: 2rem;
 }
